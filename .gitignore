@@ -8,3 +8,7 @@
 # Go files
 
 go.sum
+
+# Binary files
+
+backend/backend
