@@ -1,0 +1,101 @@
+.header {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+    flex-direction: row;
+}
+
+body {
+    background-color: #fbf1c6f6;
+}
+
+.logo {
+    width: 357px;
+    height: 255px;
+}
+
+.profile {
+    background-color: #0089c8e8;
+    padding-top: 20px;
+    padding-bottom: 150px;
+    flex-direction: row;
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-style: outset;
+    left: 200px;
+    top: 50px;
+}
+
+.backgroundPic {
+    border-radius: 5%;
+}
+
+.name {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.375rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: inline;
+    color:rgb(255, 255, 255);
+    position: relative;
+    top: 50px;
+    left: -500px;
+}
+
+.bio {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    left: 30%;
+    color: rgb(255, 255, 255);
+    display: columns;
+    position: relative;
+    top: 100px;
+    width: 40%;
+    border: outset;
+}
+
+.titles {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    display: flex;
+    position: relative;
+}
+
+.activityBloc {
+    background-color: #00ff2ae8;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.activityList {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    display: columns;
+    position: relative;
+    top: 60px;
+    width: 40%;
+    border: 3px inset black;
+}
+
+.activity {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    padding-left: 30px;
+}
+
+.footer {
+    background-color: #F1F1F1;
+    text-align: center;
+    padding: 10px;
+}
