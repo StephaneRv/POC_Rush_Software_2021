@@ -1,0 +1,10 @@
+# Editor Files and Folders
+
+.idea/
+.vscode/
+*~
+\#*#
+
+# Go files
+
+go.sum
