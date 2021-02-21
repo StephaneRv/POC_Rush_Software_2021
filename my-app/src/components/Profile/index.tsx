@@ -15,13 +15,29 @@ function Profile(props: ProfileProps): JSX.Element {
     return(
         <Fragment>
             <div className="header">
-            <img className="logo" src="https://i.imgur.com/Ouoti5H.png" />
+                <img className="logo" src="https://i.imgur.com/Ouoti5H.png" />
                 <h1>KOUBALIBRÉ</h1>
             </div>
+            <nav role="navigation">
+              <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul id="menu">
+                  <a href="#"><li>Home</li></a>
+                  <a href="#profile"><li>Profile</li></a>
+                  <a href="#activityBloc"><li>Activities</li></a>
+                  <a href="http://localhost:3000/"><li>Disconnect</li></a>
+                </ul>
+              </div>
+            </nav>
             <div className="profile">
-                <img className="avatar" src={props.imgProfileUrl} />
-                <img className="backgroundPic" src={props.imgBackgroundUrl} />
-                <p className="name">{props.name}</p>
+                <div className="pp">
+                    <img className="avatar" src={props.imgProfileUrl} />
+                    <img className="backgroundPic" src={props.imgBackgroundUrl} />
+                    <p className="name">{props.name}</p>
+                </div>
                 <p className="bio">{props.bio}</p>
             </div>
             <div className="activityBloc">
