@@ -49,8 +49,8 @@ function Profile(props: ProfileProps): JSX.Element {
                 </p>
             </div>
             <div className="footer">
-                <h1>KOUBALIBRÉ</h1>
                 <img className="logo" src="https://i.imgur.com/Ouoti5H.png" />
+                <a href="#"><p>To the top</p></a>
             </div>
         </Fragment>
     );
