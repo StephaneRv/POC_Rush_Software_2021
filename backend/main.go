@@ -3,17 +3,13 @@ package main
 import (
 	"backend/server"
 	"fmt"
-	"github.com/joho/godotenv"
+	_ "github.com/jackc/pgx/v4/stdlib"
 )
 
 func main() {
 	r := server.NewServer()
-	err := godotenv.Load()
 
-	if err != nil {
-		fmt.Printf("An error has occurred: %v\n", err)
-	}
-	err = r.Run()
+	err := r.Run()
 	if err != nil {
 		fmt.Printf("An error has occurred: %v\n", err)
 	}

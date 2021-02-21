@@ -18,8 +18,8 @@ func (User) Fields() []ent.Field {
 		field.UUID("id", uuid.UUID{}).Unique(),
 		field.String("username").NotEmpty(),
 		field.String("password").NotEmpty(),
-		field.String("description").NotEmpty(),
-		field.String("profilePicture").NotEmpty(),
+		field.String("profile_picture").NotEmpty().
+			Default("http://srnet.ca/wp-content/uploads/2017/01/Default-Profile.png"),
 	}
 }
 

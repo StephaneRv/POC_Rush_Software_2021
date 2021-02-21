@@ -2,7 +2,7 @@ FROM node:alpine
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY ../frontend .
 
 RUN npm install
 

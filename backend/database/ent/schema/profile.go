@@ -18,6 +18,6 @@ func (Profile) Fields() []ent.Field {
 // Edges of the Profile.
 func (Profile) Edges() []ent.Edge {
 	return []ent.Edge{
-		edge.From("user", User.Type).Unique(),
+		edge.From("user", User.Type).Unique().Ref("profile"),
 	}
 }
