@@ -24,7 +24,7 @@ function Login(): JSX.Element {
                             event.preventDefault();
                             axios.request({
                                 method: "post",
-                                url:"http://127.0.0.1:8000/api/login",
+                                url:"http://127.0.0.1:8080/login",
                                 data: JSON.stringify(user),
                                 withCredentials: true})
                                 .then(() => {console.log("Victory")})
