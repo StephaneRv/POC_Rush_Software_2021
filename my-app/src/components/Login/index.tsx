@@ -52,7 +52,9 @@ function Login(): JSX.Element {
                             }/>
                         </label>
                         <div className="submitButton">
+                        <form action="http://localhost:3000/profile" method="get">
                             <input className="submitButtonContent" type="submit" value="Submit"/>
+                        </form>
                         </div>
                     </form>
                 </div>
