@@ -2,9 +2,10 @@ package database
 
 import (
 	"backend/database/ent"
+	"backend/database/ent/user"
 )
 
-func Register(client *ent.Client, username, password, profilePicture string) error {
+func CreateUser(client *ent.Client, username, password, profilePicture string) error {
 	var err error
 	if profilePicture == "" {
 		_, err = client.User.Create().
@@ -24,6 +25,11 @@ func Register(client *ent.Client, username, password, profilePicture string) err
 	return nil
 }
 
-func Login(client *ent.Client, username, password string) error {
-	return nil
+func GetUserWithCredentials(client *ent.Client, username, password string) (*ent.User, error) {
+	userQuery, err := client.User.Query().Where(user.And(user.UsernameEQ(username),
+		user.PasswordEQ(password))).First(Ctx)
+	if err != nil {
+		return nil, err
+	}
+	return userQuery, nil
 }

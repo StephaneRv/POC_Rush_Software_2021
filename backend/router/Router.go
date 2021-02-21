@@ -14,7 +14,7 @@ func register(c *gin.Context) {
 	username := c.Query("username")
 	password := c.Query("password")
 	profilePicture := c.Query("profile_picture")
-	if err := database.Register(database.Client, username, password, profilePicture); err != nil {
+	if err := database.CreateUser(database.Client, username, password, profilePicture); err != nil {
 		c.AbortWithError(http.StatusBadRequest, err)
 		return
 	}
@@ -24,10 +24,12 @@ func register(c *gin.Context) {
 func login(c *gin.Context) {
 	username := c.Query("username")
 	password := c.Query("password")
-	if err := database.Login(database.Client, username, password); err != nil {
+	userQuery, err := database.GetUserWithCredentials(database.Client, username, password)
+	if err != nil {
 		c.AbortWithError(http.StatusBadRequest, err)
 		return
 	}
+	c.SetCookie("UUID", userQuery.ID.String(), 24*3600, "/", "localhost", false, false)
 	c.String(http.StatusOK, "Successfully logged in")
 }
 
